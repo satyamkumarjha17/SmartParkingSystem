@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: smart-parking-system
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: FLASK_APP
+        value: app.py
+      - key: FLASK_ENV
+        value: production
+    instances: 1
+    port: 5000
