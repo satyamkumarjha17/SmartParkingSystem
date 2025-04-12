@@ -1,29 +1,14 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template
+import os
 
-app = Flask(__name__)
+# Initialize Flask app and explicitly specify the template folder
+app = Flask(__name__, template_folder='templates')
 
-# Stack to keep track of parked cars
-parking_stack = []
-
+# Route for the home page
 @app.route('/')
 def index():
-    return render_template('index.html', parking_stack=list(reversed(parking_stack)))
+    return render_template('index.html')  # Render the index.html template
 
-@app.route('/park', methods=['POST'])
-def park():
-    car_number = request.form['car_number']
-    if car_number:
-        parking_stack.append(car_number)
-    return redirect(url_for('index'))
-
-@app.route('/remove', methods=['POST'])
-def remove():
-    if parking_stack:
-        parking_stack.pop()
-    return redirect(url_for('index'))
-
-#  REQUIRED for Render deployment
-if __name__ == "__main__":
-    import os
-    port = int(os.environ.get("PORT", 5000))
-    app.run(debug=True, host='0.0.0.0', port=port)
+# Run the app
+if __name__ == '__main__':
+    app.run(debug=True)
