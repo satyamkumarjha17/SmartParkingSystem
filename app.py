@@ -54,4 +54,4 @@ def get_stack_route():
     return jsonify({'stack': stack})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)  # Make sure debug is False in production
