@@ -9,10 +9,13 @@
   <div class="container">
     <h1>Smart Parking System</h1>
 
+<<<<<<< HEAD
     {% if message %}
       <p style="color: green; font-weight: bold;">{{ message }}</p>
     {% endif %}
 
+=======
+>>>>>>> 46f29e6f6ccb49f05ec7e674859a1948bb554c0c
     <form action="/park" method="post">
       <input type="text" name="car_number" placeholder="Enter Car Number / Employee ID" required>
       <button type="submit">Park Car</button>
@@ -25,7 +28,11 @@
     <div class="stack-box">
       <h2>Current Parking Stack</h2>
       <ul>
+<<<<<<< HEAD
         {% for car in stack %}
+=======
+        {% for car in parking_stack %}
+>>>>>>> 46f29e6f6ccb49f05ec7e674859a1948bb554c0c
           <li>{{ car }}</li>
         {% endfor %}
       </ul>

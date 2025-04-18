@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 absl-py==2.2.2
 attrs==25.3.0
 blinker==1.9.0
@@ -38,3 +39,6 @@ sentencepiece==0.2.0
 six==1.17.0
 sounddevice==0.5.1
 Werkzeug==3.1.3
+=======
+Flask==2.3.3
+>>>>>>> 46f29e6f6ccb49f05ec7e674859a1948bb554c0c

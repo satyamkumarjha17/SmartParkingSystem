@@ -2,6 +2,7 @@ services:
   - type: web
     name: smart-parking-system
     env: python
+<<<<<<< HEAD
     plan: free
     buildCommand: |
       pip install -r requirements.txt
@@ -14,3 +15,10 @@ services:
         value: production
     instances: 1
     port: 5000
+=======
+    buildCommand: ""
+    startCommand: python app.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
+>>>>>>> 46f29e6f6ccb49f05ec7e674859a1948bb554c0c
