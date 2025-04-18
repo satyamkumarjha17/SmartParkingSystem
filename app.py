@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import Flask, render_template, request, session, redirect, url_for
 from flask_session import Session
 import subprocess
@@ -51,19 +50,5 @@ def remove():
         session['message'] = 'No cars to remove'
     return redirect(url_for('index'))
 
-=======
-from flask import Flask, render_template
-import os
-
-# Initialize Flask app and explicitly specify the template folder
-app = Flask(__name__, template_folder='templates')
-
-# Route for the home page
-@app.route('/')
-def index():
-    return render_template('index.html')  # Render the index.html template
-
-# Run the app
->>>>>>> 46f29e6f6ccb49f05ec7e674859a1948bb554c0c
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,5 +1,4 @@
 :root {
-<<<<<<< HEAD
   --primary-color: #005f73;
   --secondary-color: #0a9396;
   --accent-color: #94d2bd;
@@ -86,137 +85,17 @@ li {
   color: #fff;
   font-weight: 500;
   transition: transform 0.3s;
-  animation: fadeIn 0.4s ease-in;
+}
+
+ul li:first-child {
+  animation: fadeIn 0.6s ease-in;
 }
 
 li:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px var(--accent-color);
+  transform: scale(1.02);
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
-/* ---✨ Enhancements ✨--- */
-
-/* 🚗 Car emoji before each parked car */
-li::before {
-  content: "🚗 ";
-  margin-right: 8px;
-}
-
-/* 🔁 Slight pulse animation on "Park Car" button */
-button[type="submit"]:first-of-type {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-=======
-    --primary-color: #005f73;
-    --secondary-color: #0a9396;
-    --accent-color: #94d2bd;
-    --bg-color: #f0f4f8;
-    --text-color: #333;
-    --card-bg: #ffffff;
-    --border-radius: 12px;
-  }
-  
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    display: flex;
-    justify-content: center;
-    padding: 40px 10px;
-  }
-  
-  .container {
-    background-color: var(--card-bg);
-    padding: 40px;
-    max-width: 700px;
-    width: 100%;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  }
-  
-  h1 {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 30px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"] {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: var(--border-radius);
-    font-size: 16px;
-  }
-  
-  button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 12px;
-    border: none;
-    font-size: 16px;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: var(--secondary-color);
-  }
-  
-  .stack-box {
-    margin-top: 30px;
-  }
-  
-  .stack-box h2 {
-    font-size: 18px;
-    margin-bottom: 12px;
-    color: var(--primary-color);
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    background-color: var(--accent-color);
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    border-radius: var(--border-radius);
-    color: #fff;
-    font-weight: 500;
-    transition: transform 0.3s;
-  }
-  
-  ul li:first-child {
-    animation: fadeIn 0.6s ease-in;
-  }
-  
-  li:hover {
-    transform: scale(1.02);
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
->>>>>>> 46f29e6f6ccb49f05ec7e674859a1948bb554c0c
