@@ -2,12 +2,11 @@ services:
   - type: web
     name: smart-parking-system
     env: python
-<<<<<<< HEAD
     plan: free
     buildCommand: |
       pip install -r requirements.txt
       g++ parking.cpp -o parking.exe
-    startCommand: "python app.py"
+    startCommand: gunicorn app:app
     envVars:
       - key: FLASK_APP
         value: app.py
@@ -15,10 +14,3 @@ services:
         value: production
     instances: 1
     port: 5000
-=======
-    buildCommand: ""
-    startCommand: python app.py
-    envVars:
-      - key: FLASK_ENV
-        value: production
->>>>>>> 46f29e6f6ccb49f05ec7e674859a1948bb554c0c
