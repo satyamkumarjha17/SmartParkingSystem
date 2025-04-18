@@ -3,7 +3,9 @@ services:
     name: smart-parking-system
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: |
+      pip install -r requirements.txt
+      g++ parking.cpp -o parking.exe
     startCommand: "python app.py"
     envVars:
       - key: FLASK_APP
