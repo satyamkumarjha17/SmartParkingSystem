@@ -1,0 +1,21 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore compiled C/C++ binaries
+*.exe
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore Flask session files
+flask_session/
+
+# Ignore editor/IDE specific files
+.vscode/
+*.swp
+*.swo
+
+# Ignore logs
+*.log
